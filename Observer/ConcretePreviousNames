@@ -1,0 +1,15 @@
+package Observer;
+public class ConcretePreviousNames extends PreviousNames{
+
+    public ConcretePreviousNames(Contact contact){
+        this.contact = contact;
+
+    }
+
+    @Override
+    public void update(){
+        System.out.println("test name");
+    }
+
+
+}

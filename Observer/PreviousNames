@@ -1,0 +1,15 @@
+package Observer;
+
+import java.util.ArrayList;
+
+
+public interface PreviousNames{
+
+    ArrayList<String> nameList = new ArrayList<String>();
+    Contact contact;
+
+    public static update(String s){
+        nameList.add(s);
+    }
+
+}
