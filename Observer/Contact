@@ -1,23 +1,24 @@
 package Observer;
+import java.util.List;
 
-class Contact{
+class Contact implements Contactinf{
 
     String contactName;
-    List<PreviousNames> observers;
+    List<ConcretePreviousNames> observers;
 
     public Contact(){}
 
-    public void addObserver(PreviousNames observer) {
+    public void addObserver(ConcretePreviousNames observer) {
         this.observers.add(observer);
     }
 
-    public void removeObserver(PreviousNames observer) {
+    public void removeObserver(ConcretePreviousNames observer) {
         this.observers.remove(observer);
     }
 
     public void setNewName(String name) {
         this.contactName = name;
-        for (PreviousNames observer : this.observers) {
+        for (ConcretePreviousNames observer : this.observers) {
             observer.update(this.contactName);
         }
     }

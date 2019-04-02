@@ -1,14 +1,14 @@
 package Observer;
-public class ConcretePreviousNames extends PreviousNames{
+import java.util.ArrayList;
 
-    public ConcretePreviousNames(Contact contact){
-        this.contact = contact;
+public class ConcretePreviousNames implements PreviousNames{
 
-    }
+    ArrayList<String> nameList = new ArrayList<String>();
 
-    @Override
-    public void update(){
-        System.out.println("test name");
+    public ConcretePreviousNames(){ }
+
+    public void update(String name){
+        nameList.add(name);
     }
 
 
