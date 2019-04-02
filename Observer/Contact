@@ -1,0 +1,25 @@
+package Observer;
+
+class Contact{
+
+    String contactName;
+    List<PreviousNames> observers;
+
+    public Contact(){}
+
+    public void addObserver(PreviousNames observer) {
+        this.observers.add(observer);
+    }
+
+    public void removeObserver(PreviousNames observer) {
+        this.observers.remove(observer);
+    }
+
+    public void setNewName(String name) {
+        this.contactName = name;
+        for (PreviousNames observer : this.observers) {
+            observer.update(this.contactName);
+        }
+    }
+
+}
