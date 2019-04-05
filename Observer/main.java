@@ -1,5 +1,7 @@
 package Observer;
 
+import Bridge.*;
+
 class main{
     public static void main(String [] args){
         ConcretePreviousNames observer = new ConcretePreviousNames();
@@ -19,5 +21,12 @@ class main{
         subject.setNewName("Owen");
         System.out.println(observer.nameList);
         System.out.println();
+
+        Employee emp1 = new Hourly(new PaymentCalculator(), new BonusCalculator());
+        emp1.payUp();
+
+        Employee emp2 = new Salaried(new PaymentCalculator(), new BonusCalculator());
+        emp2.payUp();
+
     }
 }
