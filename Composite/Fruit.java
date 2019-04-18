@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Fruit implements FruitInf{
     private String Name;
-    private int unitPrice;
+    private double unitPrice;
 
     // constructor
     public Fruit(String name,int unitPrice) {
@@ -17,7 +17,7 @@ public class Fruit implements FruitInf{
         return this.Name;
     }
 
-    public int getUnitPrice(){
+    public double getUnitPrice(){
         return this.unitPrice;
     }
 

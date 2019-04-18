@@ -7,7 +7,7 @@ import java.util.List;
 public class FruitBundle implements FruitInf{
 
     private String Name;
-    private int unitPrice;
+    private double unitPrice;
     private List<FruitInf> fruitList = new ArrayList<FruitInf>();
 
     // constructor
@@ -31,7 +31,7 @@ public class FruitBundle implements FruitInf{
         return this.Name;
     }
 
-    public int getUnitPrice(){
+    public double getUnitPrice(){
         this.unitPrice = 0;
         for (FruitInf fr : fruitList){
             this.unitPrice = this.unitPrice + fr.getUnitPrice();
