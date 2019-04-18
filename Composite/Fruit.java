@@ -3,28 +3,22 @@ package Composite;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Fruit {
-    private String fruitType;
+public class Fruit implements FruitInf{
+    private String Name;
     private int unitPrice;
-    private List<Fruit> fruitList;
 
     // constructor
-    public Fruit(String fruitType,int unitPrice) {
-        this.fruitType = fruitType;
+    public Fruit(String name,int unitPrice) {
+        this.Name = name;
         this.unitPrice = unitPrice;
-        fruitList = new ArrayList<Fruit>();
     }
 
-    public void add(Fruit f) {
-        fruitList.add(f);
+    public String getName(){
+        return this.Name;
     }
 
-    public void remove(Fruit f) {
-        fruitList.remove(f);
-    }
-
-    public List<Fruit> getFruit(){
-        return fruitList;
+    public int getUnitPrice(){
+        return this.unitPrice;
     }
 
 }
